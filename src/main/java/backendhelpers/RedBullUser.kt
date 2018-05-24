@@ -14,24 +14,29 @@ val newRedBullUser = RedUser(
         lastName = "Belsky"
 )
 
+val updateFirstNameOfUser = RedUser(
+        email = "kawjad@mail.ru",
+        password = "sdfkdfdff",
+        firstName = "Vasya",
+        lastName = "Belsky"
+)
 
 
-
-data class asdasdasd(
-		val id: Int,
-		val email: String,
-		val firstName: String,
-		val lastName: String,
-		val avatar: Avatar?,
-		val distributor: Distributor?
+data class RedUserResponse(
+        val id: Int,
+        val email: String,
+        val firstName: String,
+        val lastName: String,
+        val avatar: Avatar?,
+        val distributor: Distributor?
 )
 
 data class Avatar(
-		val urlToFolder: String,
-		val fileName: String
+        val urlToFolder: String,
+        val fileName: String
 )
 
 data class Distributor(
-		val id: Int,
-		val name: String
+        val id: Int,
+        val name: String
 )

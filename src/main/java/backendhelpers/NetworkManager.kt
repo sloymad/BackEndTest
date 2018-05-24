@@ -38,5 +38,14 @@ class NetworkManager {
                 .extract()
                 .response()
     }
+    fun <T> extractPut(spec: RequestSpecification, responseClass: Class<T>, requestBody: Any): T {
+        return given()
+                .spec(spec)
+                .body(requestBody)
+                .put()
+                .then()
+                .extract().`as`(responseClass)
+    }
+
 
 }
